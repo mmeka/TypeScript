@@ -12,7 +12,7 @@ Themes, Path intellisense (better support for imports), prettier, ESLint (code q
 
 # Data types
 JavaScript - number, string, boolean, null and undefined
-TypeScript - 
+TypeScript - number, string, boolean, any, null, undefined, Array, object
 
 Typescript is statically typed.
 
@@ -20,8 +20,9 @@ variable: type (but, compiled JavaScript file doesn't have those data types)
 let num1 = 5; (Typescript can infer)
 var num2:number = 9.0; (redundant; not recommended)
 const num3: {
-  str:string;
-  num:number;
+  flag:boolean;
+  arr:string[];
+  anyVar: any;  // no benefits
 };
 
 typecasting
