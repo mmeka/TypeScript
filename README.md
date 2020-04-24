@@ -43,7 +43,10 @@ function fun(num1: number, str: string):void {}
 function fun2(date:Date, cb:()=>void):date{}
 // Unknown type. Any value of any type can be assigned and re-assigned for a variable of 'unknown' type. But, in order to have that variable value to be assigned to some other type variable, an explicit type checking block like "typeof var==='string'" is required. This is better than "any" for this purpose.
 let unknownVal:unknown;
-
+// Never return type. When a function returns nothing(see below). Function with an infinite loop also another example.
+function fun(errorCode:string,description:string):never{
+  throw {"code": errorCode, "desc": description};
+}
 
 typecasting
 coersion
