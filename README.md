@@ -19,15 +19,29 @@ Typescript is statically typed.
 variable: type (but, compiled JavaScript file doesn't have those data types)
 let num1 = 5; (Typescript can infer)
 var num2:string = "string"; (redundant; not recommended)
-const num3: {
+let num3: {
   flag:boolean;
   arr:any[]; // only array of something
   anyVar: any;  // no benefits
   tupleVar: [number, string]; // Tuple is a fixed-length array; heterogenous
 };
+const num2 = 990; //for constants, typescript won't infer types since values don't change
 enum Role {
   ADMIN="admin",SUPERVISOR=190
 }
+// Union types. see below. Use in case when two types are applicable. Use typeof operator inside function
+function fun(arg1 number|string, arg2 'possible value 1'|'possible value 2') {// arg2 has only two possible valid values
+}
+// Aliases for union types
+type alias1 = 'possible value 1' | 'possible value 2';
+type alias1 = string | number;
+// Declaring variables of function type
+let functionVariable:(n: number, s:string) => void
+That means, the above variable can only hold the references to function defining of below function
+function fun(num1: number, str: string):void {}
+// Function that takes a callback function as an argument
+function fun2(date:Date, cb:()=>void):date{}
+
 
 typecasting
 coersion
@@ -40,3 +54,5 @@ coersion
 
 # Questions
 What are the usecases for Tuple?
+How to handle JSON and XML objects returned as response?
+How to handle date types and handle dates, times and timezones?
