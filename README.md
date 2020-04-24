@@ -41,6 +41,8 @@ That means, the above variable can only hold the references to function defining
 function fun(num1: number, str: string):void {}
 // Function that takes a callback function as an argument
 function fun2(date:Date, cb:()=>void):date{}
+// Unknown type. Any value of any type can be assigned and re-assigned for a variable of 'unknown' type. But, in order to have that variable value to be assigned to some other type variable, an explicit type checking block like "typeof var==='string'" is required. This is better than "any" for this purpose.
+let unknownVal:unknown;
 
 
 typecasting
