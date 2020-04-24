@@ -7,6 +7,17 @@ npm install -g typescript
 Themes, Path intellisense (better support for imports), prettier, ESLint (code quality; TSLint will be merged to ESLint), npm (egamma), Git History (Don Jayammane), Material Icon Theme (to display file icons), Live-server
 
 # Compliation, execution
+A corresponding JS file is generated or updated even if the TS file doesn't compile well.
+> tsc <typescript_file_name>
+> tsc -w <typescript_file_name> (this will watch for any changes to TS file and compiles to JS file. Watch mode will be on, so use a different terminal window)
+> tsc --init (this will tell that the current project is managed by TypeScript. It watches for any changes to TS files and generates JS files with command "tsc -w". Creates tsconfig.json file)
+
+# TSConfig.json
+"exclude":["node_modules", <all_JS_files_to_exclude_from_compilation>]. If "excludes" not present, by default node_modules is excluded. Can specify folders or wild cards.
+"include" can specify folders that to be included.
+"files" only individual files to be included.
+"target" default goes to es3
+"lib": {"dom","es6","dom.ierable","scripthost"}
 
 # Debugging
 
@@ -57,7 +68,11 @@ coersion
 > npm start (no need to restarts server to pickup changes. As soon as TypeScript complies, changes reflect. Have index.html.)
 <script src="JS_file_name" defer></script> (browsers can't understand TypeScript)
 
+# References
+https://www.youtube.com/watch?v=BwuLxPH8IDs&t=1386s
+
 # Questions
 What are the usecases for Tuple?
 How to handle JSON and XML objects returned as response?
 How to handle date types and handle dates, times and timezones?
+tsconfig.json. find defaults and more on it
