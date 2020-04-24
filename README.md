@@ -17,7 +17,8 @@ A corresponding JS file is generated or updated even if the TS file doesn't comp
 "include" can specify folders that to be included.
 "files" only individual files to be included.
 "target" default goes to es3
-"lib": {"dom","es6","dom.ierable","scripthost"}
+"lib": {"dom","es6","dom.ierable","scripthost"} // default setup when you comment lib:[]
+"sourcemap":true // This option generates ".js.map" files, which help in showing up TS files in chrome dev tools for debugging.
 
 # Debugging
 
@@ -69,7 +70,7 @@ coersion
 <script src="JS_file_name" defer></script> (browsers can't understand TypeScript)
 
 # References
-https://www.youtube.com/watch?v=BwuLxPH8IDs&t=1386s
+https://youtu.be/BwuLxPH8IDs?t=9405 (datatypes and tsconfig.json)
 
 # Questions
 What are the usecases for Tuple?
