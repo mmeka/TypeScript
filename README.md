@@ -19,6 +19,8 @@ A corresponding JS file is generated or updated even if the TS file doesn't comp
 "target" default goes to es3
 "lib": {"dom","es6","dom.ierable","scripthost"} // default setup when you comment lib:[]
 "sourcemap":true // This option generates ".js.map" files, which help in showing up TS files in chrome dev tools for debugging.
+"rootdir":"./src"
+"outdir":"./dist"   // option to redirect compiled JS files to different folder. "dist" folder will replicate the same structure as in "src" folder.
 
 # Debugging
 
@@ -70,6 +72,8 @@ coersion
 <script src="JS_file_name" defer></script> (browsers can't understand TypeScript)
 
 # References
+https://www.youtube.com/channel/UCRQhZGXC0WK85YRXl7nGX0w/playlists (Javascript)
+https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU (basics)
 https://youtu.be/BwuLxPH8IDs?t=9405 (datatypes and tsconfig.json)
 
 # Questions
