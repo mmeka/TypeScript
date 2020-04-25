@@ -64,6 +64,7 @@ function fun(errorCode:string,description:string):never{
 
 typecasting
 coersion
+Implicit typing - data type will be inferred based on the value assigned to a variable at the time of declaration. No need to explicitly mention the type at that statement.
 
 # Project
 > npm init (from the project)
@@ -81,3 +82,4 @@ What are the usecases for Tuple?
 How to handle JSON and XML objects returned as response?
 How to handle date types and handle dates, times and timezones?
 tsconfig.json. find defaults and more on it
+How the classes, classes with generics, interfaces converted when compiled to JavaScript
