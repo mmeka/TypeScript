@@ -11,6 +11,8 @@ A corresponding JS file is generated or updated even if the TS file doesn't comp
 > tsc <typescript_file_name>
 > tsc -w <typescript_file_name> (this will watch for any changes to TS file and compiles to JS file. Watch mode will be on, so use a different terminal window)
 > tsc --init (this will tell that the current project is managed by TypeScript. It watches for any changes to TS files and generates JS files with command "tsc -w". Creates tsconfig.json file)
+Compilation: converting source code to byte code
+Transpilation: conversion of soure code from one language to another
 
 # TSConfig.json
 "exclude":["node_modules", <all_JS_files_to_exclude_from_compilation>]. If "excludes" not present, by default node_modules is excluded. Can specify folders or wild cards.
