@@ -3,11 +3,14 @@
 # Installation, upgrading, managing versions, uninstalling
 npm install -g typescript
 
-# Visual studio code setup
+# Tools
+https://www.typescriptlang.org/play/index.html (playground)
+Visual Studio Code
 Themes, Path intellisense (better support for imports), prettier, ESLint (code quality; TSLint will be merged to ESLint), npm (egamma), Git History (Don Jayammane), Material Icon Theme (to display file icons), Live-server
 
 # Compliation, execution
-A corresponding JS file is generated or updated even if the TS file doesn't compile well.
+A corresponding JS file is generated or updated even if the TS file doesn't compile well. noEmitOnError option prevents this.
+In real-world projects, "tsc" is added as local Dev dependency.
 > tsc <typescript_file_name>
 > tsc -w <typescript_file_name> (this will watch for any changes to TS file and compiles to JS file. Watch mode will be on, so use a different terminal window)
 > tsc --init (this will tell that the current project is managed by TypeScript. It watches for any changes to TS files and generates JS files with command "tsc -w". Creates tsconfig.json file)
@@ -74,10 +77,17 @@ Implicit typing - data type will be inferred based on the value assigned to a va
 > npm start (no need to restarts server to pickup changes. As soon as TypeScript complies, changes reflect. Have index.html.)
 <script src="JS_file_name" defer></script> (browsers can't understand TypeScript)
 
+# Third party libraries
+If want to include a JavaScript library and if it has definition file (*.d.ts file), then compiler may autocomplete, compile and show errors.
+
 # References
+https://www.typescriptlang.org/docs/home.html (documentation)
+https://github.com/Microsoft/TypeScript/wiki/Roadmap (roadmap)
+https://www.typescriptlang.org/docs/handbook/compiler-options.html(Compiler options)
 https://www.youtube.com/channel/UCRQhZGXC0WK85YRXl7nGX0w/playlists (Javascript)
 https://www.youtube.com/playlist?list=PLqq-6Pq4lTTanfgsbnFzfWUhhAz3tIezU (basics)
 https://youtu.be/BwuLxPH8IDs?t=9405 (datatypes and tsconfig.json)
+Manning's TypeScript Quickly book
 
 # Questions
 What are the usecases for Tuple?
